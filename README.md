@@ -19,4 +19,22 @@ The goal is to make productivity more efficient by providing a single interface 
 - **Custom Commands**: Extendable modules for automation (email, calendar, etc.).  
 
 ---
-
+## Architecture Overview
+    User (Voice Command)
+            │
+            ▼
+    [ Speech Recognition (sr) ]
+            │
+            ▼
+    [ Command Processor ]
+       ├──> Predefined Actions (Web, Music, News)
+       └──> AI Response (OpenAI GPT-3.5)
+            │
+            ▼
+    [ Response Text ]
+            │
+            ▼
+    [ Text-to-Speech (gTTS + pygame) ]
+            │
+            ▼
+    User (Hears Voice Response)
